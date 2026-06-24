@@ -1,0 +1,36 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# /api/chat → ai-proxy
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/ai-proxy"
+  status = 200
+
+# /api/live-edit → ai-proxy
+[[redirects]]
+  from = "/api/live-edit"
+  to = "/.netlify/functions/ai-proxy"
+  status = 200
+
+# /api/persona → ai-proxy (zwraca domyślną personę)
+[[redirects]]
+  from = "/api/persona"
+  to = "/.netlify/functions/ai-proxy"
+  status = 200
+
+# /api/memory → ai-proxy
+[[redirects]]
+  from = "/api/memory"
+  to = "/.netlify/functions/ai-proxy"
+  status = 200
+
+# SPA fallback — wszystko inne → index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

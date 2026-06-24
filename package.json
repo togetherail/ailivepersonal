@@ -1,0 +1,10 @@
+{
+  "name": "ailiveper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0",
+    "@netlify/functions": "^3.0.0"
+  }
+}
